@@ -17,7 +17,54 @@
 
 > **Designed, developed, and owned by [MD. MEHEDI HASAN SHUVO](https://github.com/MH-SHUVO20)**
 
-A fully autonomous **Multi-Agent AI System** built with **CrewAI** that acts as a smart e-passport application assistant for Bangladesh. Four specialized AI agents — **Policy Guardian**, **Fee Calculator**, **Document Architect**, and **Bilingual Report Compiler** — collaborate in a sequential pipeline to deliver a complete, accurate, and personalized passport readiness report in **both English and Bangla (বাংলা)**.
+A fully autonomous **Multi-Agent AI System** built with **CrewAI** that acts as a smart e-passport application assistant for Bangladesh. Four specialized AI agents collaborate in a sequential pipeline to deliver a complete, accurate, and personalized passport readiness report in **both English and Bangla (বাংলা)**.
+
+---
+
+## 🤖 Meet the Four AI Agents
+
+<table align="center">
+  <tr>
+    <td align="center" width="25%">
+      <img src="https://img.shields.io/badge/Agent%201-Policy%20Guardian-006A4E?style=for-the-badge&logo=shield&logoColor=white"/><br/><br/>
+      <b>🛡️ Policy Guardian</b><br/>
+      <sub><i>Bangladesh Passport Policy Expert</i></sub><br/><br/>
+      Enforces age-based eligibility rules.<br/>
+      Flags invalid requests (minors &amp; seniors requesting 10-year passports).<br/>
+      Issues structured <code>ELIGIBILITY FLAG</code> with corrected options.<br/><br/>
+      <img src="https://img.shields.io/badge/Rule--Based-Eligibility-006A4E?style=flat-square"/>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.shields.io/badge/Agent%202-Fee%20Calculator-1565C0?style=for-the-badge&logo=calculator&logoColor=white"/><br/><br/>
+      <b>💰 Fee Calculator</b><br/>
+      <sub><i>Financial Auditor</i></sub><br/><br/>
+      Computes the exact BDT fee from the 2026 official schedule.<br/>
+      Accounts for page count, validity, and delivery type.<br/>
+      All fees include <b>15% VAT</b>.<br/><br/>
+      <img src="https://img.shields.io/badge/2026%20Fee-VAT%20Inclusive-1565C0?style=flat-square"/>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.shields.io/badge/Agent%203-Document%20Architect-7B1FA2?style=for-the-badge&logo=files&logoColor=white"/><br/><br/>
+      <b>📄 Document Architect</b><br/>
+      <sub><i>Documentation Officer</i></sub><br/><br/>
+      Generates a numbered document checklist tailored to age, profession, and situation.<br/>
+      Handles minors, govt. staff, name changes &amp; seniors.<br/><br/>
+      <img src="https://img.shields.io/badge/Profession--Specific-Checklist-7B1FA2?style=flat-square"/>
+    </td>
+    <td align="center" width="25%">
+      <img src="https://img.shields.io/badge/Agent%204-Report%20Compiler-F42A41?style=for-the-badge&logo=translate&logoColor=white"/><br/><br/>
+      <b>🗺️ Bilingual Report Compiler</b><br/>
+      <sub><i>Bilingual Passport Report Officer</i></sub><br/><br/>
+      Merges all outputs into one structured Markdown report.<br/>
+      Delivers in <b>English</b> AND <b>Bangla (বাংলা)</b> simultaneously.<br/><br/>
+      <img src="https://img.shields.io/badge/English%20%2B%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE-Bilingual-F42A41?style=flat-square"/>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Sequential%20Pipeline-Agent%201%20→%20Agent%202%20→%20Agent%203%20→%20Agent%204-0D1117?style=for-the-badge&labelColor=006A4E" alt="Pipeline"/>
+</p>
 
 ---
 
