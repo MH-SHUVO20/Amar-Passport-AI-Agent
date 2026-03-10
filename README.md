@@ -1,7 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,40:006A4E,100:F42A41&height=160&text=Amar%20Passport%20AI%20Agent&fontSize=30&fontColor=ffffff&animation=fadeIn&fontAlignY=65" width="100%"/>
-
-<h1 align="center">🛂 Amar Passport AI Agent</h1>
-<h3 align="center">Intelligent Multi-Agent System for Bangladesh E-Passport Applications</h3>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,40:006A4E,100:F42A41&height=200&text=Amar%20Passport%20AI%20Agent&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=60&desc=Intelligent%20Multi-Agent%20System%20for%20Bangladesh%20E-Passport&descSize=16&descAlignY=78&descColor=cccccc" width="100%"/>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
@@ -196,7 +193,7 @@ The system follows a **sequential multi-agent pipeline** where each agent produc
 ## 🤖 The Four Agents
 
 | # | Agent | Role | Responsibility |
-|:---:|---|---|---|
+|:---:|:---|:---|:---|
 | 1 | **Policy Guardian** | Bangladesh Passport Policy Expert | Age-based eligibility verification, validity enforcement, flag invalid requests |
 | 2 | **Fee Calculator** | Financial Auditor | Compute exact VAT-inclusive fee from 2026 schedule using page count, validity, delivery type |
 | 3 | **Document Architect** | Documentation Officer | Generate a numbered, fully customized document checklist per applicant category |
@@ -205,7 +202,7 @@ The system follows a **sequential multi-agent pipeline** where each agent produc
 **Eligibility Rules Enforced:**
 
 | Age Group | Permitted Validity | Required ID | Notes |
-|---|:---:|---|---|
+|:---|:---:|:---|:---|
 | Under 18 | 5 years only | Birth Registration (English) | Both parents' NID mandatory. 10-year passport NOT allowed. |
 | 18 – 64 | 5 or 10 years | NID Card | Full eligibility for both options |
 | 65 and above | 5 years only | NID Card | Senior citizens capped at 5-year validity only |
@@ -217,7 +214,7 @@ The system follows a **sequential multi-agent pipeline** where each agent produc
 Each agent is configured with specific parameters to control behavior, iteration limits, and role definitions.
 
 | Parameter | Value (All Agents) | Purpose |
-|---|:---:|---|
+|:---|:---:|:---|
 | `allow_delegation` | `False` | Prevents agents from handing off tasks to each other; ensures strict role isolation |
 | `max_iter` | `5` | Maximum reasoning iterations per agent before forced output |
 | `llm` | `groq/meta-llama/llama-4-scout-17b-16e-instruct` | Shared LLM backend used by all four agents |
@@ -399,7 +396,7 @@ LOCAL_PASSPORT_DB
 **Delivery Times:**
 
 | Type | Time | Note |
-|---|:---:|---|
+|:---|:---:|:---|
 | Regular | 15 Working Days | Standard delivery |
 | Express | 7 Working Days | Expedited processing |
 | Super Express | 2 Working Days | Agargaon (Dhaka) pickup only — inside Bangladesh |
@@ -413,7 +410,7 @@ The final output is a **bilingual Markdown table** rendered in the Jupyter Noteb
 **Section 1 — English Passport Readiness Report:**
 
 | Field | Details |
-|---|---|
+|:---|:---|
 | Applicant Profile | 24-year-old private sector employee, Dhaka |
 | Eligibility Status | ✅ Approved |
 | Passport Validity | 10 Years |
@@ -427,7 +424,7 @@ The final output is a **bilingual Markdown table** rendered in the Jupyter Noteb
 **Section 2 — বাংলা পাসপোর্ট প্রস্তুতি রিপোর্ট:**
 
 | ক্ষেত্র | বিবরণ |
-|---|---|
+|:---|:---|
 | আবেদনকারীর প্রোফাইল | ২৪ বছর বয়সী বেসরকারি চাকরিজীবী, ঢাকা |
 | যোগ্যতার অবস্থা | ✅ অনুমোদিত |
 | পাসপোর্টের মেয়াদ | ১০ বছর |
@@ -445,7 +442,7 @@ The final output is a **bilingual Markdown table** rendered in the Jupyter Noteb
 Five real-world scenarios are tested to validate all rule branches:
 
 | # | Scenario | Profile | Key Test |
-|:---:|---|---|---|
+|:---:|:---|:---|:---|
 | 1 | Standard Adult | 24-year-old private sector employee — 64-page, Express | Normal happy path |
 | 2 | Minor Error Handling | 15-year-old student requesting 10-year passport | Eligibility flag triggered |
 | 3 | Government Employee | 35-year-old public university employee — 48-page, Regular | NOC/GO document requirement |
@@ -454,14 +451,14 @@ Five real-world scenarios are tested to validate all rule branches:
 
 ---
 
-## � Results & Findings
+## 📊 Results & Findings
 
 ### All 5 Scenarios Passed Correctly
 
 Every test scenario was executed and the multi-agent system produced **accurate, structured, bilingual output** in all cases. Below is a summary of outcomes per scenario:
 
 | # | Scenario | Eligibility | Fee (BDT) | Flag Triggered | Bilingual Output |
-|:---:|---|:---:|:---:|:---:|:---:|
+|:---:|:---|:---:|:---:|:---:|:---:|
 | 1 | Standard Adult (24yr, Private, Express, 64-page) | ✅ Approved | ৳ 10,350 | ❌ None | ✅ EN + বাংলা |
 | 2 | Minor (15yr, 10-year request) | ⚠️ Flagged | ৳ 8,625 *(corrected to 5yr)* | ✅ ELIGIBILITY FLAG | ✅ EN + বাংলা |
 | 3 | Govt. Employee (35yr, Regular, 48-page) | ✅ Approved | ৳ 5,750 | ❌ None | ✅ EN + বাংলা |
@@ -510,7 +507,7 @@ This verbose trace confirms that each agent reasons step-by-step before producin
 Applying for a Bangladesh e-passport is a **multi-step, rule-dense, error-prone process**. Citizens routinely face:
 
 | Problem | Real-World Impact |
-|---|---|
+|:---|:---|
 | **Not knowing what fee to pay** | Applicants pay incorrect amounts or rely on outdated fee charts from 2023–2024 |
 | **Bringing wrong documents** | Trips to the passport office wasted; applications rejected on arrival |
 | **Requesting invalid validity** | Minors and senior citizens are turned away after long wait times for requesting 10-year passports |
@@ -541,7 +538,7 @@ The entire system is contained in a single Jupyter Notebook with no external dat
 ### Before vs. After
 
 | | Without This System | With This System |
-|---|---|---|
+|:---|:---|:---|
 | **Fee lookup** | Manual search on govt. website, risk of outdated info | Instant, accurate, VAT-inclusive fee from 2026 schedule |
 | **Eligibility check** | Unknown until rejected at the counter | Proactively flagged before any action is taken |
 | **Document checklist** | Generic PDF from website, not role-specific | Personalized numbered list based on age, profession, situation |
@@ -551,10 +548,10 @@ The entire system is contained in a single Jupyter Notebook with no external dat
 
 ---
 
-## �📦 Libraries Used
+## 📦 Libraries Used
 
 | Library | Purpose |
-|---|---|
+|:---|:---|
 | `crewai` | Multi-agent orchestration framework (Agents, Tasks, Crew, Process) |
 | `langchain-groq` | LangChain integration with Groq inference API |
 | `litellm` | Unified LLM interface for testing and LLM connectivity |
@@ -582,7 +579,7 @@ Amar Passport AI Agent/
 **Notebook Sections:**
 
 | Section | Content |
-|:---:|---|
+|:---:|:---|
 | 1 | Project Title & Module Info |
 | 2 | Package Installation |
 | 3 | Library Imports & Warning Configuration |
